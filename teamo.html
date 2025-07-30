@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TE AMOO ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+
+    #mensaje {
+      font-size: 3rem;
+      font-family: 'Arial', sans-serif;
+      color: red;
+      background-color: transparent;
+      padding: 20px 40px;
+      border-radius: 12px;
+      transition: background-color 0.3s;
+    }
+
+    #mensaje.resaltado {
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div id="mensaje">TE AMOO <span>❤️</span></div>
+
+  <script>
+    const mensaje = document.getElementById('mensaje');
+
+    mensaje.addEventListener('touchstart', () => {
+      mensaje.classList.toggle('resaltado');
+    });
+
+    mensaje.addEventListener('mousedown', () => {
+      mensaje.classList.toggle('resaltado');
+    });
+  </script>
+</body>
+</html>
